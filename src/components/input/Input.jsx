@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-function Input() {
+function Input({ children, name, value, handleTodoChange }) {
   return (
     <StInputCon>
-      <label htmlFor=""></label>
-      <StInput></StInput>
+      <label htmlFor="">{children}</label>
+      <StInput
+        name={name}
+        value={value}
+        onChange={(e) => handleTodoChange(e)}
+      ></StInput>
     </StInputCon>
   );
 }
@@ -17,7 +21,7 @@ const StInputCon = styled.div`
   width: 100%;
   margin-right: 10%;
 
-  .label {
+  label {
     width: 50px;
     display: block;
     color: #fff;

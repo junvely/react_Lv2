@@ -2,11 +2,11 @@ import Button from "components/button/Button";
 import React from "react";
 import styled from "styled-components";
 
-function Todo() {
+function Todo({ todo }) {
   return (
     <StTodoCon>
-      <h4>title</h4>
-      <p>text</p>
+      <h4>{todo.title}</h4>
+      <p>{todo.text}</p>
       <StButtonCon>
         <Button></Button>
         <Button></Button>

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-function Button() {
-  return <StButton>Button</StButton>;
+function Button({ onclick }) {
+  return <StButton onClick={onclick}>Button</StButton>;
 }
 
 const StButton = styled.button`

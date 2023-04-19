@@ -1,14 +1,27 @@
 import Todo from "components/todo/Todo";
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
-function TodoList() {
+function TodoList({ children, done }) {
+  const todos = useSelector((state) => state.todos);
   return (
     <StTodoListCon>
-      <h3>TODOLIST</h3>
-      <StTodosCon>
-        <Todo></Todo>
-      </StTodosCon>
+      <h3>{children}</h3>
+      <StFlexCon>
+        {done === true &&
+          todos
+            .filter((todo) => todo.isDone)
+            .map((todo) => {
+              return <Todo key={todo.id} todo={todo}></Todo>;
+            })}
+        {done === false &&
+          todos
+            .filter((todo) => !todo.isDone)
+            .map((todo) => {
+              return <Todo key={todo.id} todo={todo}></Todo>;
+            })}
+      </StFlexCon>
     </StTodoListCon>
   );
 }
@@ -22,7 +35,7 @@ const StTodoListCon = styled.div`
   }
 `;
 
-const StTodosCon = styled.div`
+const StFlexCon = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;

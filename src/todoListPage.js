@@ -3,7 +3,7 @@ import TodoList from "components/todo-list/TodoList";
 import React from "react";
 import styled from "styled-components";
 
-function todoList() {
+function TodoListPage() {
   return (
     <StWrap>
       <nav>
@@ -13,8 +13,8 @@ function todoList() {
         </ul>
       </nav>
       <InputBar></InputBar>
-      <TodoList></TodoList>
-      <TodoList></TodoList>
+      <TodoList done={false}>Working🔥</TodoList>
+      <TodoList done={true}>Done🎉</TodoList>
     </StWrap>
   );
 }
@@ -34,4 +34,4 @@ const StWrap = styled.div`
   }
 `;
 
-export default todoList;
+export default TodoListPage;
