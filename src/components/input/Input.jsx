@@ -9,6 +9,7 @@ function Input({ children, name, value, handleTodoChange }) {
         name={name}
         value={value}
         onChange={(e) => handleTodoChange(e)}
+        required
       ></StInput>
     </StInputCon>
   );

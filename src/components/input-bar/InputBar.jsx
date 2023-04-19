@@ -22,14 +22,19 @@ function InputBar() {
     setTodo(newTodo);
   };
 
-  const onClickAddTodo = () => {
+  const onClickAddTodo = (e) => {
+    e.preventDefault();
+    if (!todo.title || !todo.text) {
+      alert("제목과 내용을 모두 입력해 주세요");
+      return;
+    }
     dispatch(addTodo(todo));
     setTodo(initialTodo);
   };
 
   return (
-    <StInputBarCon>
-      <StFlexCon>
+    <StFormCon>
+      <StInputCon>
         <Input
           name="title"
           value={todo.title}
@@ -44,20 +49,20 @@ function InputBar() {
         >
           내용
         </Input>
-      </StFlexCon>
+      </StInputCon>
       <Button onclick={onClickAddTodo}></Button>
-    </StInputBarCon>
+    </StFormCon>
   );
 }
 
-const StInputBarCon = styled.div`
+const StFormCon = styled.form`
   padding: 3% 5%;
   display: flex;
   justify-content: space-between;
   background-color: #a879e3;
 `;
 
-const StFlexCon = styled.div`
+const StInputCon = styled.div`
   width: 50%;
   display: flex;
 `;
