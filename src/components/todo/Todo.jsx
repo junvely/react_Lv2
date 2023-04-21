@@ -1,15 +1,30 @@
 import Button from "components/button/Button";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteTodo, doneToggleChange } from "redux/modules/todos";
 import styled from "styled-components";
 
 function Todo({ todo }) {
+  const dispatch = useDispatch();
+  const onClickDeleteTodo = () => {
+    dispatch(deleteTodo(todo.id));
+  };
+
+  const onClickToggleChange = () => {
+    dispatch(doneToggleChange(todo.id));
+  };
+
   return (
     <StTodoCon>
       <h4>{todo.title}</h4>
       <p>{todo.text}</p>
       <StButtonCon>
-        <Button></Button>
-        <Button></Button>
+        <Button type="delete" onclick={onClickDeleteTodo}>
+          DELETE
+        </Button>
+        <Button type="done" onclick={onClickToggleChange}>
+          DONE
+        </Button>
       </StButtonCon>
     </StTodoCon>
   );

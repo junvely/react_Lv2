@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-function Button({ onclick }) {
-  return <StButton onClick={onclick}>Button</StButton>;
+function Button({ children, onclick }) {
+  return <StButton onClick={onclick}>{children}</StButton>;
 }
 
 const StButton = styled.button`
@@ -21,36 +21,3 @@ const StButton = styled.button`
 `;
 
 export default Button;
-
-// .delete {
-//   width: 45%;
-// }
-
-// .delete {
-//   width: 150px;
-//   background-color: #ccc;
-
-//   &:hover {
-//     font-weight: 500;
-//     color: #fff;
-//     background-color: #696969;
-//   }
-// }
-
-// .done {
-//   background-color: #64dc95;
-
-//   &:hover {
-//     color: #fff;
-//     background-color: #17d164;
-//   }
-// }
-
-// .notYet {
-//   background-color: #6736ed94;
-
-//   &:hover {
-//     color: #fff;
-//     background-color: #6836ed;
-//   }
-// }
