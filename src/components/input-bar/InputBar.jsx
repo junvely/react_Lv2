@@ -50,7 +50,9 @@ function InputBar() {
           내용
         </Input>
       </StInputCon>
-      <Button onclick={onClickAddTodo}>추가하기</Button>
+      <Button type="add" onClick={onClickAddTodo}>
+        추가하기
+      </Button>
     </StFormCon>
   );
 }

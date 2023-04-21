@@ -19,11 +19,14 @@ function Todo({ todo }) {
       <h4>{todo.title}</h4>
       <p>{todo.text}</p>
       <StButtonCon>
-        <Button type="delete" onclick={onClickDeleteTodo}>
+        <Button type="delete" onClick={onClickDeleteTodo}>
           DELETE
         </Button>
-        <Button type="done" onclick={onClickToggleChange}>
-          DONE
+        <Button
+          type={todo.isDone === true ? "done" : "notYet"}
+          onClick={onClickToggleChange}
+        >
+          {todo.isDone === true ? "Done" : "NotYet"}
         </Button>
       </StButtonCon>
     </StTodoCon>
