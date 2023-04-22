@@ -10,6 +10,8 @@ App 보러가기 : https://react-redux-todo-list-eight.vercel.app/
 
 ## <img src="./public/todo-list.jpg" />
 
+## <img src="./public/detail.jpg" />
+
 #### 2. Redux 전역 상태관리
 
 - 전역 state : todos
