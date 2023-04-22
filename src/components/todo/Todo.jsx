@@ -1,4 +1,11 @@
 import Button from "components/button/Button";
+import {
+  ButtonStyles,
+  bgColors,
+  buttonBgColor,
+  buttonHoverBgColor,
+  hoverBgColor,
+} from "components/button/Button.styles";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTodo, doneToggleChange } from "redux/modules/todos";
@@ -19,12 +26,23 @@ function Todo({ todo }) {
       <h4>{todo.title}</h4>
       <p>{todo.text}</p>
       <StButtonCon>
-        <Button type="delete" onClick={onClickDeleteTodo}>
+        <Button
+          bgColor={buttonBgColor.delete}
+          hoverBgColor={buttonHoverBgColor.delete}
+          onClick={onClickDeleteTodo}
+        >
           DELETE
         </Button>
         <Button
-          type={todo.isDone === true ? "done" : "notYet"}
           onClick={onClickToggleChange}
+          bgColor={
+            todo.isDone === true ? buttonBgColor.done : buttonBgColor.notYet
+          }
+          hoverBgColor={
+            todo.isDone === true
+              ? buttonHoverBgColor.done
+              : buttonBgColor.notYet
+          }
         >
           {todo.isDone === true ? "Done" : "NotYet"}
         </Button>

@@ -1,4 +1,5 @@
 import Button from "components/button/Button";
+import { buttonWidth, width } from "components/button/Button.styles";
 import Input from "components/input/Input";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -50,7 +51,7 @@ function InputBar() {
           내용
         </Input>
       </StInputCon>
-      <Button type="add" onClick={onClickAddTodo}>
+      <Button width={buttonWidth.add} onClick={onClickAddTodo}>
         추가하기
       </Button>
     </StFormCon>
