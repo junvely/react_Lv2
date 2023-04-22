@@ -1,14 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --theme-color-lightGray: #ccc;
-    --theme-color-gray: #696969;
-    --theme-color-lightGreen: #64dc95;
-    --theme-color-green: #17d164;
-    --theme-color-lightNavy: #6736ed94;
-    --theme-color-navy: #6836ed;
-  }
 
  * {
   margin: 0;

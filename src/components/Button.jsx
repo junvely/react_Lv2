@@ -1,5 +1,5 @@
 import React from "react";
-import { StButton } from "../styles/Button.styles";
+import { StButton } from "../styles/ButtonStyles";
 
 function Button({ children, onClick, width, bgColor, hoverBgColor }) {
   return (

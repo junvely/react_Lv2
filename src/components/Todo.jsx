@@ -1,10 +1,10 @@
-import Button from "components/Button";
-import { buttonBgColor, buttonHoverBgColor } from "styles/Button.styles";
 import React from "react";
+import Button from "components/Button";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteTodo, doneToggleChange } from "redux/modules/todos";
 import styled from "styled-components";
+import { buttonBgColor, buttonHoverBgColor } from "styles/ButtonStyles";
+import { deleteTodo, doneToggleChange } from "redux/modules/todos";
 
 function Todo({ todo }) {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ function Todo({ todo }) {
           hoverBgColor={
             todo.isDone === true
               ? buttonHoverBgColor.done
-              : buttonBgColor.notYet
+              : buttonHoverBgColor.notYet
           }
         >
           {todo.isDone === true ? "Done" : "NotYet"}

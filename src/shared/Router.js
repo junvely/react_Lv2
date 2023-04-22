@@ -1,6 +1,6 @@
+import React from "react";
 import Detail from "pages/Detali";
 import TodoListPage from "pages/TodoListPage";
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function Router() {
