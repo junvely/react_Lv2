@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import { colors } from "./them";
 
-export const buttonBgColor = {
-  delete: colors.lightGray,
-  done: colors.lightGreen,
-  notYet: colors.lightNavy,
-};
-
-export const buttonHoverBgColor = {
-  delete: colors.gray,
-  done: colors.green,
-  notYet: colors.navy,
+export const buttonColors = {
+  delete: {
+    normal: colors.lightGray,
+    hover: colors.gray,
+  },
+  done: {
+    normal: colors.lightGreen,
+    hover: colors.green,
+  },
+  notYet: {
+    normal: colors.lightNavy,
+    hover: colors.navy,
+  },
 };
 
 export const StButton = styled.button`
