@@ -10,7 +10,7 @@ App 보러가기 :
 
 ## <img src="./public/todo-list.jpg" />
 
-#### 2. Redux 상태관리
+#### 2. Redux 전역 상태관리
 
 - 전역 state : todos
 
@@ -73,7 +73,7 @@ export const doneToggleChange = (payload) => {
 };
 ```
 
-#### 2. Routing : 동적 라우팅
+#### 3. Routing : 동적 라우팅
 
 ```javascript
 function Router() {
