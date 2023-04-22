@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 
-function Detail() {
+function DetailPage() {
   const params = useParams();
   const navigator = useNavigate();
   const todo = useSelector((state) =>
@@ -60,4 +60,4 @@ const StButtonCon = styled.div`
   background-color: #bf79f8;
 `;
 
-export default Detail;
+export default DetailPage;
