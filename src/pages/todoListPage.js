@@ -1,6 +1,5 @@
-import InputBar from "components/input-bar/InputBar";
-import TodoList from "components/todo-list/TodoList";
-import React from "react";
+import InputBar from "components/InputBar";
+import TodoList from "components/TodoList";
 import styled from "styled-components";
 
 function TodoListPage() {

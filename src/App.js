@@ -1,15 +1,11 @@
-import "App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TodoListPage from "pages/todoListPage";
+import Router from "shared/Router";
+import GlobalStyle from "styles/GlobalStyles";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" Component={TodoListPage}></Route>
-        </Routes>
-      </BrowserRouter>
+      <GlobalStyle />
+      <Router></Router>;
     </>
   );
 }

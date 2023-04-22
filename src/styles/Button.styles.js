@@ -20,7 +20,7 @@ export const StButton = styled.button`
   width: ${(props) => props.width || "45%"};
   background-color: ${(props) => props.bgColor || "#bf79f8"};
   color: #fff;
-  line-height: 40px;
+  line-height: 35px;
   border: 1px solid;
   border-radius: 10px;
   transition: all 0.2s;

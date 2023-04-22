@@ -1,6 +1,6 @@
-import Button from "components/button/Button";
-import { buttonWidth, width } from "components/button/Button.styles";
-import Input from "components/input/Input";
+import Button from "components/Button";
+import { buttonWidth } from "styles/Button.styles";
+import Input from "components/Input";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "redux/modules/todos";

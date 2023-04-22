@@ -4,7 +4,7 @@ export const TOGGLE_CHANGE = "todos/TOGGLE_CHANGE";
 
 const initialTodos = [
   {
-    id: Date.now(),
+    id: 1,
     title: "리액트 공부중",
     text: "재밌는 리액트 공부하기!",
     isDone: false,

@@ -1,13 +1,8 @@
-import Button from "components/button/Button";
-import {
-  ButtonStyles,
-  bgColors,
-  buttonBgColor,
-  buttonHoverBgColor,
-  hoverBgColor,
-} from "components/button/Button.styles";
+import Button from "components/Button";
+import { buttonBgColor, buttonHoverBgColor } from "styles/Button.styles";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { deleteTodo, doneToggleChange } from "redux/modules/todos";
 import styled from "styled-components";
 
@@ -23,6 +18,7 @@ function Todo({ todo }) {
 
   return (
     <StTodoCon>
+      <Link to={`/${todo.id}`}>상세보기</Link>
       <h4>{todo.title}</h4>
       <p>{todo.text}</p>
       <StButtonCon>
@@ -59,9 +55,16 @@ const StTodoCon = styled.div`
   border-radius: 10px;
   h4 {
     font-size: 24px;
+    margin: 10% 0;
   }
   p {
     margin: 10% 0;
+  }
+  a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
   }
 `;
 
