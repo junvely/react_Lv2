@@ -4,7 +4,7 @@
 
 TODO-LIST에서 Redux로 전역 상태관리하기. 동적 라우팅을 이용해 상세페이지 라우팅하고 모달창 생성하기
 
-App 보러가기 :
+App 보러가기 : https://react-redux-todo-list-eight.vercel.app/
 
 ##### TODO-LIST 화면 이미지
 
